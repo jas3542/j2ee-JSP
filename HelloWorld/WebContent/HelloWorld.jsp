@@ -67,6 +67,18 @@
 	<div>----------------------------------------------------------------------------------------------------------</div>
 	<br></br>
 	
+	<!-- Mysql driver imported with Maven. -->
+	<div><<--Mysql Connection-->></div>
+	<%@ page import="org.Hello.Connector" %>
+	<div>
+		<%
+			if(!Connector.getConnection().isClosed()) {
+				out.println("Connected");
+			};
+		%>
+	</div>
+	<div>----------------------------------------------------------------------------------------------------------</div>
+	<br></br>
 	
 </body>
 </html>
